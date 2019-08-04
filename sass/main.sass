@@ -1,0 +1,188 @@
+$acc: #AF8165
+$acc2: #94684D
+$acc3: #B3967C
+$acc4: #F1D9C2
+$link: #FABC84
+$dark: #303030
+$dark2: #4A4A4A
+$dark3: #B6B6B0
+$light: #F8F8F7
+$mw: 1440px
+
+%flex
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+@import "default"
+
+.block
+	box-sizing: border-box
+	width: 810px
+	height: auto
+	background: white
+	color: $dark
+	padding: 17px
+
+.item
+	@extend %flex
+	flex-wrap: wrap
+	justify-content: space-between
+	margin-top: 30px
+
+.photo
+	@extend %flex
+	justify-content: center
+	align-items: center
+	box-sizing: border-box
+	width: 255px
+	height: 271px
+	padding: 15px
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+	border-radius: 25px
+	background-color: #ffffff
+
+.info
+	box-sizing: border-box
+	width: 255px
+
+	p
+		font-size: 14px
+		margin-top: 49px
+
+	p+p
+		margin-top: 23px
+
+.descr
+	@extend %flex
+	flex-direction: column
+	justify-content: space-between
+	box-sizing: border-box
+	flex-grow: 1
+	padding-left: 28px
+
+.price,.otp,.time
+	color: #cdcdcd
+	font-size: 16px
+
+	span
+		font-size: 18px
+		color: black
+		font-weight: 600
+
+.otp
+	margin: 0 35px
+
+.price
+	span
+		color: #4e81b6
+
+.composition
+	flex-grow: 1
+	padding-left: 28px
+
+	p
+		padding: 29px 0 20px
+		border-top: 4px solid #f5f7f1
+		font-size: 22px
+		color: #cdcdcd
+		font-weight: 600
+
+	.item-li
+		@extend %flex
+		justify-content: space-between
+		align-items: center
+		box-sizing: border-box
+		background: #f2f6f8
+		height: 35px
+		font-size: 16px
+		padding-left: 10px
+		padding-right: 10px
+
+		span
+			color: #cdcdcd
+
+	.item-li:nth-child(even)
+		background: white
+
+.i
+	box-sizing: border-box
+	align-items: center
+	height: 110px
+	border-radius: 25px
+	background-color: #f6f6f3
+	padding: 41px 25px 33px 26px
+
+	.rate
+		font-size: 35px
+		font-weight: 600
+
+		span
+			font-size: 22px
+			color: #cdcdcd
+
+	.i-descr
+		font-size: 12px
+		color: #cdcdcd
+
+	.stars
+		font-size: 14px
+		color: #4e81b6
+		font-weight: 600
+		text-align: center
+
+.icons
+	flex-grow: 1
+	text-align: center
+
+	img
+		margin: 0 6px
+
+.ic
+	align-items: center
+	p
+		font-size: 12px
+
+@media (max-width: 940px)
+	.top
+		flex-direction: column
+		position: relative
+		height: auto
+	.descr
+		padding: 30px 0 0
+		height: 200px
+	.short
+		position: absolute
+		flex-direction: column
+		top: 0
+		left: 270px
+	.otp
+		margin: 30px 0
+
+@media (max-width: 625px)
+	.gg
+		flex-direction: column
+		.info
+			width: 100%
+			p
+				width: 100%
+	.composition
+		padding: 20px 0
+		order: -1
+
+@media (max-width: 460px)
+	.photo
+		margin: 0 auto
+	.short
+		flex-direction: column
+		position: static 
+	.i
+		flex-direction: column
+		height: auto
+		margin: 20px 0
+	.i-descr
+		margin: 10px 0
+	.descr
+		height: auto
